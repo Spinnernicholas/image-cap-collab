@@ -1,0 +1,18 @@
+database:
+  filename: data.db
+app:
+  debug: true
+  dataset_path: dataset/
+  hello: World
+tags:
+  - name: literaltag
+  - name: size
+    type: int
+    range: [1, 10]
+  - name: percentage
+    type: decimal
+    range: [0, 1]
+  - name: color
+    choices: [red, green, blue]
+  - name: label
+    type: text
