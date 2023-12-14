@@ -1,25 +1,12 @@
 <script>
-    import { onMount } from 'svelte';
-    import Image from './components/Image.svelte';
-
-    let name = '';
-
-    onMount(async () => {
-        const response = await fetch('/hello');
-        const data = await response.json();
-        name = data.name;
-    });
+    import { Router, Link, Route } from "svelte-routing";
+    import Home from "./Home.svelte";
+    import Dataset from "./Dataset.svelte";
+    import Annotate from "./Annotate.svelte";
 </script>
 
-<main>
-    <Image />
-</main>
-
-<style>
-    main {
-        text-align: center;
-        padding: 1em;
-        max-width: 240px;
-        margin: 0 auto;
-    }
-</style>
+<Router>
+    <Route path="/" component={Home} />
+    <Route path="/dataset" component={Dataset} />
+    <Route path="/annotate" component={Annotate} />
+</Router>
