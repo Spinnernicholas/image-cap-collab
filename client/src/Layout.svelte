@@ -13,7 +13,7 @@
     </header>
     <slot></slot>
     <footer class="flex items-center justify-center p-4 bg-gray-800 text-white">
-        <p>&copy; 2022 ICC Tool. All rights reserved.</p>
+        <p>&copy; 2023 ICC Tool. All rights reserved. <a href="https://github.com/Spinnernicholas/image-cap-collab" target="_blank"><img class="inline-block ml-2" alt="" src="https://img.shields.io/badge/image--cap--collab-gray?logo=github"></a></p>
     </footer>
 </main>
 

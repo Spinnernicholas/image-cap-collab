@@ -44,11 +44,7 @@ def serve(path):
     else:
         return send_from_directory(app.static_folder, 'index.html')
 
-@app.route('/hello')
-def hello():
-    return {'name': app.config['app']['hello']}
-
-@app.route('/api/images/<filename>', methods=['GET'])
+@app.route('/api/img/<filename>', methods=['GET'])
 def get_image_file(filename):
     return send_from_directory(app.config['app']['dataset_path'], filename)
 
