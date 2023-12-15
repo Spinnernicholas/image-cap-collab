@@ -1,7 +1,8 @@
-from .database import db
+from ..database import db
 
 class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(255))
     filename = db.Column(db.String(255))
     annotations = db.relationship('Annotation', backref='image', lazy=True)
 

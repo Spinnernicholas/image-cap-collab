@@ -2,8 +2,8 @@ from flask import Flask, jsonify, send_from_directory
 import yaml
 import os
 from server.database import db
-from server.image import Image
-from server.annotation import Annotation
+from server.models.image import Image
+from server.models.annotation import Annotation
 
 app = Flask(__name__, static_folder='public')
 
